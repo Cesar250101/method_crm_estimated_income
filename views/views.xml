@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="method_crm_estimated_income.list">
+      <field name="name">method_crm_estimated_income list</field>
+      <field name="model">method_crm_estimated_income.method_crm_estimated_income</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="method_crm_estimated_income.action_window">
+      <field name="name">method_crm_estimated_income window</field>
+      <field name="res_model">method_crm_estimated_income.method_crm_estimated_income</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="method_crm_estimated_income.action_server">
+      <field name="name">method_crm_estimated_income server</field>
+      <field name="model_id" ref="model_method_crm_estimated_income_method_crm_estimated_income"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="method_crm_estimated_income" id="method_crm_estimated_income.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="method_crm_estimated_income.menu_1" parent="method_crm_estimated_income.menu_root"/>
+    <menuitem name="Menu 2" id="method_crm_estimated_income.menu_2" parent="method_crm_estimated_income.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="method_crm_estimated_income.menu_1_list" parent="method_crm_estimated_income.menu_1"
+              action="method_crm_estimated_income.action_window"/>
+    <menuitem name="Server to list" id="method_crm_estimated_income" parent="method_crm_estimated_income.menu_2"
+              action="method_crm_estimated_income.action_server"/>
+    -->
+  </data>
+</odoo>
