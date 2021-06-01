@@ -6,14 +6,13 @@ from odoo import models, fields, api
 class Crm(models.Model):
     _inherit = 'crm.lead'
     
-    planned_revenue = fields.Monetary('Expected Revenue', 
+    planned_revenue = fields.Monetary('Expected Revenue Method', 
                                       compute='_compute_sale_order_amount_total',
                                       currency_field='company_currency', 
                                       track_visibility='always',
-                                      store=True)
-
+                                      store=True)        
     
-    @api.onchange('order_ids')
+    @api.depends('order_ids','probability')
     def _compute_sale_order_amount_total(self):
         for lead in self:
             total = 0.0
