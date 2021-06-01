@@ -6,7 +6,11 @@ from odoo import models, fields, api
 class Crm(models.Model):
     _inherit = 'crm.lead'
     
-    planned_revenue = fields.Monetary('Expected Revenue', compute='_compute_sale_order_amount_total',currency_field='company_currency', track_visibility='always')
+    planned_revenue = fields.Monetary('Expected Revenue', 
+                                      compute='_compute_sale_order_amount_total',
+                                      currency_field='company_currency', 
+                                      track_visibility='always',
+                                      store=True)
 
     
     @api.onchange('order_ids')
